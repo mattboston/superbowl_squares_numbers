@@ -16,8 +16,19 @@
 # limitations under the License.
 
 import random
+from optparse import OptionParser
 
-teams = [ 'Philadelphia Eagles', 'New England Patriots' ]
+usage = "Usage: %prog [options] arg"
+parser = OptionParser(usage)
+parser.add_option("-a", "--afc", dest="afc", help="AFC Team")
+parser.add_option("-n", "--nfc", dest="nfc", help="NFC Team")
+(options, args) = parser.parse_args()
+
+if options.afc is None or options.nfc is None:
+  parser.error("incorrect number of arguments")
+  sys.exit(2)
+
+teams = [ options.afc, options.nfc ]
 all_numbers = range(10)
 
 print("All numbers that will be used: %s" % all_numbers)
