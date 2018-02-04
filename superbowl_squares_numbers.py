@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # Copyright 2018 Matt Shields <matt@shields.tv>
+# https://github.com/mattboston/superbowl_squares_numbers.git
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
